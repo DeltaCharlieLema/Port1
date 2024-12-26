@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="My%20Portfolio_files/index.css">
+    <link rel="stylesheet" href="My%20Portfolio_files/all.min.css">
+  <link href="data:text/css,%3Ais(%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23top-ad%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap__module%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container)%20%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"></head>
+  <body>
+    <nav>
+      <h2 id="logo">Ada Lovelace</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="https://priceless-kepler-06d70c.netlify.app/contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+              Hi! I'm Ada, Countess of Lovelace and am an English mathematician
+              and writer, chiefly known for my work on Charles Babbage's
+              proposed mechanical general-purpose computer, the Analytical
+              Engine.
+            </p>
+            <p>
+              I am one of the first to recognize that machines have applications
+              beyond pure calculation, and to have published the first algorithm
+              intended to be carried out by such a machine.
+            </p>
+            <p>
+              In my free time I like to read about scientific developments,
+              mathematics, and computational mathematics. I also like to take my
+              chances of winning big.
+            </p>
+            <p>
+              Fun fact! I've been programing for
+              <span id="time-container">6,596,955,861</span> seconds!
+            </p>
+          </div>
+          <img src="My%20Portfolio_files/ada-lovelace-20825279-1-402.jpg" alt="A photo of Ada Lovelace" class="portrait">
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>The first computer program</h3>
+          </summary>
+          <img src="My%20Portfolio_files/Diagram_for_the_computation_of_Bernoulli_numbers.jpg" alt="Lovelace's diagram from note G, the first published computer
+          algorithm" class="project-image">
+          <p class="project-description">
+            The world's first computer program for computing Bernoulli numbers.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>The Analytical Engine</h3>
+          </summary>
+          <img src="My%20Portfolio_files/analyticalmachine_babbage_london.webp" alt="An original model of part of the Analytical Engine" class="project-image">
+          <p class="project-description">
+            I helped Charles Babbage on topics ranging from math to computation
+            that helped the development of the Analytical Engine.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>The Ada programming language</h3>
+          </summary>
+          <img src="My%20Portfolio_files/Ada_Mascot_with_slogan.svg.png" alt="Ada mascot, a black and cobalt blue hummingbird, flying above the
+          slogan &quot;Time-tested, safe and secure&quot;" class="project-image">
+          <p class="project-description">
+            My work inspired the United States Department of Defense to name
+            their new programming language after me.
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-react"></i>
+          <i class="fab fa-aws"></i>
+          <i class="fab fa-sketch"></i>
+          <i class="fab fa-figma"></i>
+          <i class="fab fa-git"></i>
+          <i class="fab fa-chrome"></i>
+          <i class="fas fa-terminal"></i>
+          <i class="fas fa-universal-access"></i>
+          <i class="fab fa-npm"></i>
+          <i class="fab fa-node"></i>
+          <i class="fab fa-github"></i>
+        </div>
+      </section>
+    </main>
+
+    <footer>Made with <span class="heart">♥</span> in London</footer>
+  
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "12-10-1815";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+
+</body></html>
