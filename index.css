@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  color: var(--font-color);
+}
+*{
+  box-sizing: border-box;
+  /*border: 1px solid purple;*/
+}
+
+:root {
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 12px;
+  --shadow-size-1: .8em;
+
+  --border-radius: 12px;
+
+  --font-color: #323232;
+  --font-size: 1rem;
+}
+
+.heart {
+  color: purple;
+}
+
+h2 {
+  font-family: "Proza Libre", sans-serif;
+  /*margin-bottom: var(--spacing-2);*/
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  padding: 0 var(--spacing-3);
+  /*max-width: 900px;*/
+  margin: 0 clamp(0%, 10%, 10%);
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  height: 200vh;
+}
+
+nav {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  width: 100vw;
+}
+.navigation-items{
+  display: flex;
+  list-style-type: none;
+  justify-content: end;
+  align-items: center;
+  padding: 0 2rem;
+  margin: 0;
+}
+.navigation-item{
+  padding: 2rem 30px;
+}
+.navigation-item:hover{
+  background-color: grey;
+}
+.navigation-items{
+
+}
+
+.navigation-items a{
+  /*padding: 10rem;*/
+
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.about-me-container {
+  display: grid;
+  grid-template-areas:
+  "header header header"
+  "am am pic"
+  "pro pro pro"
+  "skills skills skills"
+  "footer footer footer";
+  /*justify-content: center;*/
+  /*align-b*/
+
+
+}
+
+
+.about-me-text-container{
+  grid-area: am;
+}
+
+.project-image {
+
+  grid-area: pic;
+  max-width: 75%;
+  height: auto;
+  /*aspect-ratio: 9/16;*/
+  object-fit: cover;
+  /*padding: clamp(.05rem, 2em, 2em);*/
+  /*background-color: ;*/
+  margin: 1rem auto;
+  border-radius: var(--border-radius);
+}
+.projects-text-container{
+  grid-area: pro;
+}
+
+details {
+  /*display: inline-flex;*/
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+details summary * {
+  display: inline;
+}
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+.skills {
+  grid-area: skills;
+  font-size: 2em;
+  width: 2em;
+  margin-top: var(--spacing-1);
+}
+.footer{
+  grid-area: footer;
+  text-align: center;
+}
+
