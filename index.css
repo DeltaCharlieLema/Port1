@@ -45,6 +45,15 @@ body {
   /*flex-direction: column;*/
   height: 200vh;
 }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #606060;
+  margin: 1em 0;
+  padding: 0;
+}
+
 
 nav {
   background-color: white;
@@ -56,7 +65,8 @@ nav {
   padding: 0;
   margin: 0;
   z-index: 1;
-  width: 100vw;
+  width: 110%;
+  border-bottom: 2px solid var(--font-color);
 }
 .navigation-items{
   display: flex;
@@ -120,7 +130,7 @@ nav {
 
 details {
   /*display: inline-flex;*/
-  border: 1px solid #aaa;
+  /*border: 1px solid #aaa;*/
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
 }
