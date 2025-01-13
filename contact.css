@@ -8,6 +8,7 @@ html,
 body {
   height: 100%;
   color: var(--font-color);
+  margin: 0;
 }
 *{
   box-sizing: border-box;
@@ -36,7 +37,7 @@ h2 {
   /*margin-bottom: var(--spacing-2);*/
 }
 
-body {
+main {
   font-size: 1rem;
   font-family: "Open Sans", sans-serif;
   padding: 0;
@@ -44,7 +45,7 @@ body {
   margin: 0;
   /*display: flex;*/
   /*flex-direction: column;*/
-  height: 200vh;
+  height: 80vh;
 }
 hr {
   display: block;
@@ -177,13 +178,28 @@ details[open] summary {
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-  margin: 0 5%;
+  margin: 0;
   gap: 1rem;
+  background-color: black;
+  padding: 2rem;
+  color: white;
 }
 .footer-list, .footer-header{
   display: flex;
   justify-content: center;
-  flex-direction: column  ;
+  flex-direction: column;
+}
+.footer-list-1{
+  flex-grow: 3;
+}
+.footer a{
+  color: inherit;
+  text-decoration: none;
+}
+.icon-container{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 li{
   list-style: none;
@@ -198,4 +214,11 @@ li{
   nav{
     font-size: 1.2rem;
   }
+}
+.icon{
+  display: block;
+  height: 21px;
+  width: 21px;
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  /*background-color: var(#cccccc);*/
 }
