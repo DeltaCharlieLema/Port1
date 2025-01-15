@@ -1,19 +1,11 @@
 class Media {
-    constructor(author,title,pages){
-        this._author = author;
+    constructor(title){
         this._title = title;
-        this._pages = pages;
         this._isCheckedOut = false;
         this._ratings = [];
     }
-    get author(){
-        return this._author;
-    }
     get title(){
         return this._title;
-    }
-    get pages(){
-        return this._pages;
     }
     get isCheckedOut(){
         return this._isCheckedOut;
@@ -38,7 +30,6 @@ class Movie extends Media {
     constructor(director,title,runTine) {
         super(title);
         this._director = director;
-        this._title = title;
         this._runTime = runTine;
     }
     get director(){
@@ -46,6 +37,19 @@ class Movie extends Media {
     }
     get runTime(){
         return this._runTime;
+    }
+}
+class Book extends Media {
+    constructor(author,title,pages) {
+        super(title);
+        this._author = author;
+        this._pages = pages;
+    }
+    get author(){
+        return this._author;
+    }
+    get pages(){
+        return this._pages;
     }
 }
 class Cd extends Media {
