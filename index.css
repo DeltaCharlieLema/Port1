@@ -113,7 +113,7 @@ nav {
   margin: 0 3rem;
 }
 
-.project-image {
+.main-image {
 
   grid-area: pic;
   max-width: 75%;
@@ -151,12 +151,22 @@ details[open] summary {
   border-bottom: 1px solid #aaa;
   margin-bottom: 0.5em;
 }
+.projects-text-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin: 10px;
+  grid-auto-rows: 200px;
+  align-items: stretch;
+  gap: 10px;
+  grid-auto-flow: dense;
+}
 
 .skills {
   grid-area: skills;
   font-size: 2em;
   width: 2em;
   margin-top: var(--spacing-1);
+  padding: 2rem;
 }
 .footer{
   grid-area: footer;
